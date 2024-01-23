@@ -1,5 +1,8 @@
 package com.demo.aviation;
 
+import java.io.File;
+import java.io.IOException;
+
 import com.demo.aviation.models.Aircraft;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,8 +22,10 @@ public class AircraftService {
         Aircraft car = null;
         try {
             System.out.println(objectMapper);
-            car = objectMapper.readValue(json, Aircraft.class);
+            car = objectMapper.readValue(new File("src/main/resources/data.json"), Aircraft.class);
         } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         return car;
