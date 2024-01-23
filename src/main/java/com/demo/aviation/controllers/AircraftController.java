@@ -1,8 +1,8 @@
 package com.demo.aviation.controllers;
 
-import com.demo.aviation.AircraftService;
+import com.demo.aviation.services.AircraftService;
 import com.demo.aviation.models.Aircraft;
-import com.fasterxml.jackson.core.JsonProcessingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
