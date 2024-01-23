@@ -1,7 +1,9 @@
 package com.demo.aviation.controllers;
 
+import java.util.List;
+
 import com.demo.aviation.services.AircraftService;
-import com.demo.aviation.models.Aircraft;
+import com.demo.aviation.configurations.properties.Aircraft;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,12 +18,8 @@ public class AircraftController {
     @Autowired
     AircraftService aircraftService;
 
-    @GetMapping("/one")
-    public ResponseEntity<Aircraft> getAircraft(){
-        Aircraft aircraft = null;
-
-        aircraft = aircraftService.createAircraft();
-
-        return ResponseEntity.ok(aircraft);
+    @GetMapping
+    public ResponseEntity<List<Aircraft>> getAircrafts(){
+        return ResponseEntity.ok(aircraftService.fetchAircrafts());
     }
 }

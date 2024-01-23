@@ -1,0 +1,82 @@
+data:
+  aircrafts:
+    - registrationNumber: "9HIAN"
+      type: "Sira"
+      model: "Tecnam"
+      seats: 2
+      enduranceInHours: 5
+      totalFlightTime: 12000
+      multiEngine: false
+    - registrationNumber: "FHUBK"
+      type: "Sira"
+      model: "Tecnam"
+      seats: 2
+      enduranceInHours: 5
+      totalFlightTime: 9000
+      multiEngine: false
+    - registrationNumber: "9HFLY"
+      type: "Warrior"
+      model: "Piper"
+      seats: 4
+      enduranceInHours: 6
+      totalFlightTime: 20000
+      multiEngine: false
+    - registrationNumber: "9HDGN"
+      type: "DA62"
+      model: "Diamond"
+      seats: 4
+      enduranceInHours: 8
+      totalFlightTime: 2000
+      multiEngine: true
+
+  students:
+    - studentID: "SP001"
+      name: "John Doe"
+      age: 22
+      totalFlightHours: 50
+      currentAircraft: "9HIAN"
+    - studentID: "SP002"
+      name: "Jane Smith"
+      age: 21
+      totalFlightHours: 35
+      currentAircraft: "FHUBK"
+    - studentID: "SP003"
+      name: "Alex Johnson"
+      age: 23
+      totalFlightHours: 40
+      currentAircraft: "9HFLY"
+    - studentID: "SP004"
+      name: "Emily Davis"
+      age: 24
+      totalFlightHours: 60
+      currentAircraft: "9HDGN"
+    - studentID: "SP005"
+      name: "Michael White"
+      age: 22
+      totalFlightHours: 55
+      currentAircraft: "9HIAN"
+    - studentID: "SP006"
+      name: "Sophia Brown"
+      age: 21
+      totalFlightHours: 30
+      currentAircraft: "FHUBK"
+    - studentID: "SP007"
+      name: "William Miller"
+      age: 23
+      totalFlightHours: 45
+      currentAircraft: "9HFLY"
+    - studentID: "SP008"
+      name: "Olivia Wilson"
+      age: 24
+      totalFlightHours: 55
+      currentAircraft: "9HDGN"
+    - studentID: "SP009"
+      name: "Daniel Lee"
+      age: 22
+      totalFlightHours: 50
+      currentAircraft: "9HIAN"
+    - studentID: "SP010"
+      name: "Emma Hall"
+      age: 21
+      totalFlightHours: 40
+      currentAircraft: "FHUBK"

@@ -1,11 +1,10 @@
 package com.demo.aviation.services;
 
-import java.io.File;
-import java.io.IOException;
+import java.util.List;
 
-import com.demo.aviation.models.Aircraft;
+import com.demo.aviation.configurations.properties.Aircraft;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.demo.aviation.configurations.properties.AviationAcademyProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,20 +13,12 @@ import org.springframework.stereotype.Service;
 public class AircraftService {
 
     @Autowired
+    AviationAcademyProperties aviationAcademyProperties;
+
+    @Autowired
     ObjectMapper objectMapper;
 
-    public Aircraft createAircraft(){
-        String json = "{ \"registrationNumber\" : \"9hian\", \"type\" : \"sira\" , \"model\" : \"sira\" }";
-
-        Aircraft car = null;
-        try {
-            System.out.println(objectMapper);
-            car = objectMapper.readValue(new File("src/main/resources/data.json"), Aircraft.class);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return car;
+    public List<Aircraft> fetchAircrafts(){
+        return aviationAcademyProperties.getAircrafts();
     }
 }
