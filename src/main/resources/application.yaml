@@ -80,3 +80,10 @@ data:
       age: 21
       totalFlightHours: 40
       currentAircraft: "FHUBK"
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: aviation-academy
