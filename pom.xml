@@ -43,6 +43,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>uk.co.jemos.podam</groupId>
+			<artifactId>podam</artifactId>
+			<version>7.2.5.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -52,7 +59,7 @@
 				<artifactId>native-maven-plugin</artifactId>
 				<configuration>
 					<buildArgs>
-						<arg>-H:IncludeResources="resource/.*\\.yml$"</arg>
+						<arg>-H:IncludeResources="resources/.*\\.yml$"</arg>
 					</buildArgs>
 				</configuration>
 			</plugin>

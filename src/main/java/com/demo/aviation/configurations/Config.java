@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @EnableMongoRepositories(basePackages = "com.demo.aviation.persistence.repositories")
 public class Config {
 
-    Logger logger = LoggerFactory.getLogger(Config.class);;
+    private final Logger logger = LoggerFactory.getLogger(Config.class);
 
     @Autowired
     AircraftRepository aircraftRepository;

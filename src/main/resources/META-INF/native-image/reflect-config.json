@@ -168,7 +168,8 @@
 },
 {
   "name":"com.demo.aviation.services.AircraftService",
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.repositories.AircraftRepository"] }]
 },
 {
   "name":"com.fasterxml.jackson.core.JsonGenerator"
