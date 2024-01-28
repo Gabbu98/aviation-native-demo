@@ -140,7 +140,7 @@
   "queryAllDeclaredConstructors":true
 },
 {
-  "name":"com.demo.aviation.persistence.models.AircraftModel_Accessor_vws0qm",
+  "name":"com.demo.aviation.persistence.models.AircraftModel_Accessor_j57wxy",
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.models.AircraftModel"] }]
 },
@@ -152,7 +152,7 @@
   "queryAllDeclaredConstructors":true
 },
 {
-  "name":"com.demo.aviation.persistence.models.StudentModel_Accessor_8tf1s9",
+  "name":"com.demo.aviation.persistence.models.StudentModel_Accessor_8d1it4",
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.models.StudentModel"] }]
 },

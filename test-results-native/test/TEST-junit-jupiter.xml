@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="JUnit Jupiter" tests="1" skipped="0" failures="0" errors="0" time="0.112" hostname="gabriel-Swift-SF314-51" timestamp="2024-01-28T12:19:49">
+<testsuite name="JUnit Jupiter" tests="1" skipped="0" failures="0" errors="0" time="0.219" hostname="gabriel-Swift-SF314-51" timestamp="2024-01-28T20:43:59">
 <properties>
 <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
 <property name="FILE_LOG_CHARSET" value="UTF-8"/>
-<property name="PID" value="22571"/>
+<property name="PID" value="6464"/>
 <property name="file.encoding" value="UTF-8"/>
 <property name="file.separator" value="/"/>
 <property name="java.awt.headless" value="true"/>
@@ -38,7 +38,7 @@
 <property name="org.graalvm.nativeimage.kind" value="executable"/>
 <property name="os.arch" value="amd64"/>
 <property name="os.name" value="Linux"/>
-<property name="os.version" value="6.5.0-14-generic"/>
+<property name="os.version" value="6.5.0-15-generic"/>
 <property name="path.separator" value=":"/>
 <property name="stderr.encoding" value="UTF-8"/>
 <property name="stdout.encoding" value="UTF-8"/>
@@ -49,7 +49,7 @@
 <property name="user.name" value="gabriel"/>
 <property name="user.timezone" value="Europe/Rome"/>
 </properties>
-<testcase name="fetchAircrafts_success()" classname="com.demo.aviation.services.AircraftServiceTest" time="0.004">
+<testcase name="fetchAircrafts_success()" classname="com.demo.aviation.services.AircraftServiceTest" time="0.002">
 <system-out><![CDATA[
 unique-id: [engine:junit-jupiter]/[class:com.demo.aviation.services.AircraftServiceTest]/[method:fetchAircrafts_success()]
 display-name: fetchAircrafts_success()
