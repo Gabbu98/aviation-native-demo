@@ -30,7 +30,6 @@ public class AircraftServiceTest {
     void fetchAircrafts_success(){
         List<AircraftModel> result = aircraftService.fetchAircrafts();
 
-        logger.info("Asserting results.");
         assertThat(result.size()).isEqualTo(aviationAcademyProperties.getAircrafts().size());
         for(int i = 0 ; i< result.size(); i++){
             assertThat(result.get(i).getRegistrationNumber()).isEqualTo(aviationAcademyProperties.getAircrafts().get(i).getRegistrationNumber());

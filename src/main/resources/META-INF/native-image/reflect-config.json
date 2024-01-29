@@ -130,7 +130,18 @@
 },
 {
   "name":"com.demo.aviation.controllers.AircraftController",
+  "allDeclaredFields":true,
   "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.demo.aviation.mappers.AircraftMapper",
+  "queryAllDeclaredMethods":true,
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.demo.aviation.mappers.AircraftMapperImpl",
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"mapAircraftModelToAircraftResponse","parameterTypes":["com.demo.aviation.persistence.models.AircraftModel"] }]
 },
 {
   "name":"com.demo.aviation.persistence.models.AircraftModel",
@@ -140,7 +151,7 @@
   "queryAllDeclaredConstructors":true
 },
 {
-  "name":"com.demo.aviation.persistence.models.AircraftModel_Accessor_j57wxy",
+  "name":"com.demo.aviation.persistence.models.AircraftModel_Accessor_6l0esw",
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.models.AircraftModel"] }]
 },
@@ -152,7 +163,7 @@
   "queryAllDeclaredConstructors":true
 },
 {
-  "name":"com.demo.aviation.persistence.models.StudentModel_Accessor_8d1it4",
+  "name":"com.demo.aviation.persistence.models.StudentModel_Accessor_ekhhnc",
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.models.StudentModel"] }]
 },
@@ -1925,6 +1936,10 @@
 },
 {
   "name":"org.springframework.web.bind.annotation.ExceptionHandler",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"org.springframework.web.bind.annotation.GetMapping",
   "queryAllDeclaredMethods":true
 },
 {
