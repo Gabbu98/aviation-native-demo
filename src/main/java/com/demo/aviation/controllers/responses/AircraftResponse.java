@@ -19,9 +19,6 @@ public class AircraftResponse {
 
     private boolean multiEngine;
 
-    public AircraftResponse() {
-    }
-
     public AircraftResponse(String registrationNumber, String type, String model, int seats, int enduranceInHours, int totalFlightTime, boolean multiEngine) {
         this.registrationNumber = registrationNumber;
         this.type = type;

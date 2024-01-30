@@ -141,7 +141,7 @@
 {
   "name":"com.demo.aviation.mappers.AircraftMapperImpl",
   "queryAllDeclaredMethods":true,
-  "methods":[{"name":"mapAircraftModelToAircraftResponse","parameterTypes":["com.demo.aviation.persistence.models.AircraftModel"] }]
+  "methods":[{"name":"mapAircraftModelToAircraftResponse","parameterTypes":["com.demo.aviation.persistence.models.AircraftModel"] }, {"name":"mapAircraftRequestToAircraftRecord","parameterTypes":["com.demo.aviation.controllers.requests.AircraftRequest"] }]
 },
 {
   "name":"com.demo.aviation.persistence.models.AircraftModel",
@@ -151,7 +151,7 @@
   "queryAllDeclaredConstructors":true
 },
 {
-  "name":"com.demo.aviation.persistence.models.AircraftModel_Accessor_6l0esw",
+  "name":"com.demo.aviation.persistence.models.AircraftModel_Accessor_1xr73v",
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.models.AircraftModel"] }]
 },
@@ -163,7 +163,7 @@
   "queryAllDeclaredConstructors":true
 },
 {
-  "name":"com.demo.aviation.persistence.models.StudentModel_Accessor_ekhhnc",
+  "name":"com.demo.aviation.persistence.models.StudentModel_Accessor_vyjuq8",
   "queryAllPublicConstructors":true,
   "methods":[{"name":"<init>","parameterTypes":["com.demo.aviation.persistence.models.StudentModel"] }]
 },
@@ -1749,7 +1749,8 @@
 },
 {
   "name":"org.springframework.data.mongodb.repository.support.CrudMethodMetadata",
-  "queryAllDeclaredMethods":true
+  "queryAllDeclaredMethods":true,
+  "methods":[{"name":"getReadPreference","parameterTypes":[] }]
 },
 {
   "name":"org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean",
@@ -1762,7 +1763,7 @@
   "queryAllDeclaredMethods":true,
   "queryAllPublicMethods":true,
   "queryAllDeclaredConstructors":true,
-  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.mongodb.repository.query.MongoEntityInformation","org.springframework.data.mongodb.core.MongoOperations"] }, {"name":"saveAll","parameterTypes":["java.lang.Iterable"] }]
+  "methods":[{"name":"<init>","parameterTypes":["org.springframework.data.mongodb.repository.query.MongoEntityInformation","org.springframework.data.mongodb.core.MongoOperations"] }, {"name":"deleteAll","parameterTypes":[] }, {"name":"saveAll","parameterTypes":["java.lang.Iterable"] }]
 },
 {
   "name":"org.springframework.data.querydsl.QuerydslPredicateExecutor"
@@ -1939,11 +1940,11 @@
   "queryAllDeclaredMethods":true
 },
 {
-  "name":"org.springframework.web.bind.annotation.GetMapping",
+  "name":"org.springframework.web.bind.annotation.Mapping",
   "queryAllDeclaredMethods":true
 },
 {
-  "name":"org.springframework.web.bind.annotation.Mapping",
+  "name":"org.springframework.web.bind.annotation.RequestBody",
   "queryAllDeclaredMethods":true
 },
 {

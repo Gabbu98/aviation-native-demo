@@ -35,6 +35,8 @@ public class Config {
 
     @Bean
     public List<?> migrateAircrafts(AviationAcademyProperties aviationAcademyProperties){
+        aircraftRepository.deleteAll();
+
         logger.info("Migrating Aircraft information.");
         final List<AircraftModel> aircrafts = aviationAcademyProperties.getAircrafts().stream().map(aircraft ->
                 new AircraftModel(aircraft.getRegistrationNumber(),aircraft.getType(),aircraft.getModel(),

@@ -1,15 +1,10 @@
-package com.demo.aviation.persistence.models;
-
-import org.springframework.context.annotation.Primary;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+package com.demo.aviation.controllers.requests;
 
 import java.util.Objects;
 
-@Document(collection = "aircrafts")
-public class AircraftModel {
 
-    @Id
+public class AircraftRequest {
+
     private String registrationNumber;
 
     private String type;
@@ -24,7 +19,7 @@ public class AircraftModel {
 
     private boolean multiEngine;
 
-    public AircraftModel(String registrationNumber, String type, String model, int seats, int enduranceInHours, int totalFlightTime, boolean multiEngine) {
+    public AircraftRequest(String registrationNumber, String type, String model, int seats, int enduranceInHours, int totalFlightTime, boolean multiEngine) {
         this.registrationNumber = registrationNumber;
         this.type = type;
         this.model = model;
@@ -34,11 +29,43 @@ public class AircraftModel {
         this.multiEngine = multiEngine;
     }
 
+    public int getSeats() {
+        return seats;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
+    public int getEnduranceInHours() {
+        return enduranceInHours;
+    }
+
+    public void setEnduranceInHours(int enduranceInHours) {
+        this.enduranceInHours = enduranceInHours;
+    }
+
+    public int getTotalFlightTime() {
+        return totalFlightTime;
+    }
+
+    public void setTotalFlightTime(int totalFlightTime) {
+        this.totalFlightTime = totalFlightTime;
+    }
+
+    public boolean isMultiEngine() {
+        return multiEngine;
+    }
+
+    public void setMultiEngine(boolean multiEngine) {
+        this.multiEngine = multiEngine;
+    }
+
     public String getRegistrationNumber() {
         return registrationNumber;
     }
 
-    public AircraftModel setRegistrationNumber(String registrationNumber) {
+    public AircraftRequest setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
     }
@@ -47,7 +74,7 @@ public class AircraftModel {
         return type;
     }
 
-    public AircraftModel setType(String type) {
+    public AircraftRequest setType(String type) {
         this.type = type;
         return this;
     }
@@ -56,44 +83,8 @@ public class AircraftModel {
         return model;
     }
 
-    public AircraftModel setModel(String model) {
+    public AircraftRequest setModel(String model) {
         this.model = model;
-        return this;
-    }
-
-    public int getSeats() {
-        return seats;
-    }
-
-    public AircraftModel setSeats(int seats) {
-        this.seats = seats;
-        return this;
-    }
-
-    public int getEnduranceInHours() {
-        return enduranceInHours;
-    }
-
-    public AircraftModel setEnduranceInHours(int enduranceInHours) {
-        this.enduranceInHours = enduranceInHours;
-        return this;
-    }
-
-    public int getTotalFlightTime() {
-        return totalFlightTime;
-    }
-
-    public AircraftModel setTotalFlightTime(int totalFlightTime) {
-        this.totalFlightTime = totalFlightTime;
-        return this;
-    }
-
-    public boolean isMultiEngine() {
-        return multiEngine;
-    }
-
-    public AircraftModel setMultiEngine(boolean multiEngine) {
-        this.multiEngine = multiEngine;
         return this;
     }
 
@@ -105,7 +96,7 @@ public class AircraftModel {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        AircraftModel aircraft = (AircraftModel) o;
+        AircraftRequest aircraft = (AircraftRequest) o;
         return seats == aircraft.seats && enduranceInHours == aircraft.enduranceInHours && totalFlightTime == aircraft.totalFlightTime && multiEngine == aircraft.multiEngine && Objects.equals(
                 registrationNumber, aircraft.registrationNumber) && Objects.equals(type, aircraft.type) && Objects.equals(model,
                 aircraft.model);
@@ -118,7 +109,7 @@ public class AircraftModel {
 
     @Override
     public String toString() {
-        return "AircraftModel{" +
+        return "AircraftRequest{" +
                 "registrationNumber='" + registrationNumber + '\'' +
                 ", type='" + type + '\'' +
                 ", model='" + model + '\'' +

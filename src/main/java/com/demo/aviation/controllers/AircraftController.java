@@ -1,19 +1,19 @@
 package com.demo.aviation.controllers;
 
+import com.demo.aviation.controllers.requests.AircraftRequest;
 import com.demo.aviation.controllers.responses.AircraftResponse;
 import com.demo.aviation.mappers.AircraftMapper;
 import com.demo.aviation.services.AircraftService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("aircrafts")
 public class AircraftController {
 
     @Autowired
@@ -22,11 +22,17 @@ public class AircraftController {
     @Autowired
     private AircraftMapper aircraftMapper;
 
-    @GetMapping(produces = "application/json")
+    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE, value = "/aircrafts")
     public ResponseEntity<List<AircraftResponse>> getAircrafts(){
 
-        final List<AircraftResponse> aircraftResponses = this.aircraftService.fetchAircrafts().stream().map(aircraftModel -> aircraftMapper.mapAircraftModelToAircraftResponse(aircraftModel)).collect(Collectors.toList());
+        final List<AircraftResponse> aircraftResponses = this.aircraftService.fetchAircrafts().stream().map(aircraftModel ->
+                aircraftMapper.mapAircraftModelToAircraftResponse(aircraftModel)).collect(Collectors.toList());
+        return new ResponseEntity<>(aircraftResponses, HttpStatus.OK);
+    }
 
-        return ResponseEntity.ok(aircraftResponses);
+    @RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE, value = "/aircrafts/register")
+    public ResponseEntity<AircraftResponse> registerAircraft(@RequestBody AircraftRequest aircraftRequest){
+        return new ResponseEntity<>(aircraftMapper.mapAircraftModelToAircraftResponse(this.aircraftService
+                .createAircraft(aircraftMapper.mapAircraftRequestToAircraftRecord(aircraftRequest))),HttpStatus.CREATED);
     }
 }
